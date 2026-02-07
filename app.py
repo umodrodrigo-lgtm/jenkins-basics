@@ -6,10 +6,10 @@ app = Flask(__name__)
 tasks = {}
 task_id_counter = 1
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'DELETE', 'POST'])
 def index():
     global task_id_counter
-    response_text = ""
+    response_text = "Hello"
 
     if request.method == 'POST':
         if 'add_task' in request.form:
